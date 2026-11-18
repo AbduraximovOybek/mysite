@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abduraximov Oybek — Backend Developer Student</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#home" class="logo">OA</a>
+    <nav id="menu">
+      <a href="#home" data-t="nav_home"></a><a href="#about" data-t="nav_about"></a><a href="#resume" data-t="nav_resume"></a>
+      <a href="#bots" data-t="nav_bots"></a><a href="#sites" data-t="nav_sites"></a><a href="#contact" data-t="nav_contact"></a>
+    </nav>
+    <div class="tools">
+      <select id="lang" aria-label="Language"><option value="uz">UZ</option><option value="ru">RU</option><option value="en">EN</option></select>
+      <button id="theme" class="ib" aria-label="Theme">☾</button>
+      <button id="burger" class="ib burger" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="wrap hero">
+      <div>
+        <h1 id="name"></h1>
+        <p class="role" id="role"></p>
+        <p class="lead" id="intro"></p>
+        <div class="btns"><a href="#bots" class="btn primary" data-t="btn_projects"></a><a href="#contact" class="btn" data-t="btn_contact"></a></div>
+      </div>
+      <pre class="term" id="term" aria-hidden="true"></pre>
+    </section>
+    <div class="wrap stats">
+      <a href="#bots" class="stat"><b id="nBots">0</b><span data-t="stat_bots"></span></a>
+      <a href="#sites" class="stat"><b id="nSites">0</b><span data-t="stat_sites"></span></a>
+    </div>
+
+    <section id="about" class="wrap sec"><h2 data-t="nav_about"></h2><p class="text" id="about"></p></section>
+
+    <section id="resume" class="wrap sec"><h2 data-t="nav_resume"></h2>
+      <div class="two">
+        <div class="card"><h3 data-t="skills_h"></h3><div id="skills" class="chips"></div></div>
+        <div class="card"><h3 data-t="exp_h"></h3><p id="exp" class="text"></p></div>
+      </div>
+    </section>
+
+    <section id="bots" class="wrap sec"><h2 data-t="nav_bots"></h2><div id="botGrid" class="grid"></div></section>
+    <section id="sites" class="wrap sec"><h2 data-t="nav_sites"></h2><div id="siteGrid" class="grid"></div></section>
+
+    <section id="contact" class="wrap sec"><h2 data-t="nav_contact"></h2>
+      <div class="two">
+        <div class="links">
+          <a class="card link" id="tg" target="_blank" rel="noopener"><b>Telegram</b><span></span></a>
+          <a class="card link" id="gh" target="_blank" rel="noopener"><b>GitHub</b><span></span></a>
+          <a class="card link" id="ml"><b>Email</b><span></span></a>
+        </div>
+        <form id="form" class="card">
+          <input id="fName" required data-ph="f_name"><input id="fEmail" type="email" required data-ph="f_email">
+          <textarea id="fMsg" rows="5" required data-ph="f_msg"></textarea>
+          <button class="btn primary" type="submit" data-t="f_send"></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">© <span id="year"></span> Abduraximov Oybek</footer>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>

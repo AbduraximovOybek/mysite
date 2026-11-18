@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin panel</title><meta name="robots" content="noindex">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="gate" class="card gate">
+    <h3 id="gateT"></h3><input type="password" id="pw" autocomplete="current-password">
+    <button class="btn primary" id="gateBtn"></button><p class="msg" id="gateMsg"></p>
+  </div>
+
+  <div id="panel" hidden>
+    <header class="adm-bar"><b>Admin panel</b><a href="index.html" target="_blank" class="btn sm">Saytni ko'rish</a><button class="btn sm" id="logout">Chiqish</button></header>
+    <main class="adm">
+      <p class="msg" id="msg"></p>
+
+      <section class="card"><h3>Loyiha qo'shish / tahrirlash</h3>
+        <form id="pForm">
+          <label class="f">Turi<select id="pType"><option value="bot">Telegram bot</option><option value="web">Web sayt</option></select></label>
+          <label class="f">Nomi<input id="pTitle" required></label>
+          <label class="f">Tavsif (UZ)<textarea id="pUz" rows="2"></textarea></label>
+          <label class="f">Tavsif (RU)<textarea id="pRu" rows="2"></textarea></label>
+          <label class="f">Tavsif (EN)<textarea id="pEn" rows="2"></textarea></label>
+          <label class="f">Rasm (fayl tanlang yoki havola yozing)<input type="file" id="pFile" accept="image/*"><input id="pImg" placeholder="https://... yoki bo'sh"></label>
+          <label class="f">GitHub havolasi<input id="pGit" placeholder="https://github.com/..."></label>
+          <label class="f">Demo / bot havolasi<input id="pDemo" placeholder="https://t.me/... yoki https://..."></label>
+          <div class="btns"><button class="btn primary" type="submit" id="pSave">Qo'shish</button><button class="btn" type="button" id="pCancel" hidden>Bekor qilish</button></div>
+        </form>
+      </section>
+
+      <section class="card"><h3>Loyihalar</h3><div id="pList"></div></section>
+
+      <section class="card"><h3>Profil, rezyume va aloqa</h3><div id="profile"></div>
+        <button class="btn primary" id="saveProfile">Saqlash</button></section>
+
+      <section class="card"><h3>Saytga joylash</h3>
+        <p class="warn">O'zgarishlar hozir faqat shu brauzerda saqlanadi. Hamma ko'rishi uchun "data.js yuklab olish" ni bosing, yuklangan faylni sayt papkasidagi <code>data.js</code> ustiga qo'ying va saytni qayta joylang.</p>
+        <div class="btns"><button class="btn primary" id="export">data.js yuklab olish</button><button class="btn" id="reset">O'zgarishlarni bekor qilish</button><button class="btn" id="chpw">Parolni almashtirish</button></div>
+      </section>
+    </main>
+  </div>
+  <script src="data.js"></script><script src="admin.js"></script>
+</body>
+</html>
